@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../assets/Imgs/logo-real estate.png";
+
 function Navbar() {
   const [toggle, setToggle] = useState(false);
   const [scroll, setScroll] = useState(false);
@@ -15,6 +16,14 @@ function Navbar() {
     console.log(toggle);
     setToggle(!toggle);
   };
+
+  const links = [
+    { text: "home", link: "Home" },
+    { text: "listings", link: "Listings" },
+    { text: "members", link: "Members" },
+    { text: "blog", link: "Blog" },
+    { text: "contact", link: "Contact" },
+  ];
 
   return (
     <>
@@ -51,21 +60,14 @@ function Navbar() {
           {toggle && (
             <div className="text-white text-center absolute top-[70px] left-0 w-full bg-slate-800 flex flex-col items-center gap-5 md:static md:bg-transparent py-4 md:py-0 md:flex-row md:ms-auto md:w-[65%] md:justify-between transition-all duration-500 ease-in-out ">
               <ul className="space-y-2 md:space-y-0 md:flex md:gap-4">
-                <li>
-                  <a href="/">Home</a>
-                </li>
-                <li>
-                  <a href="/">Listings </a>
-                </li>
-                <li>
-                  <a href="/">Members </a>
-                </li>
-                <li>
-                  <a href="/">Blog </a>
-                </li>
-                <li>
-                  <a href="/">Contact</a>
-                </li>
+                {links.map((item, index) => {
+                  console.log(item);
+                  return (
+                    <li key={index}>
+                      <a href={`#${item.text}`}>{item.link}</a>
+                    </li>
+                  );
+                })}
               </ul>
 
               <ul className="space-y-2 md:space-y-0 md:flex md:gap-4">
@@ -102,21 +104,13 @@ function Navbar() {
           {/* Menu desktop */}
           <div className="max-md:hidden text-white text-center absolute top-[70px] left-0 w-full bg-slate-800 flex flex-col items-center gap-5 md:static md:bg-transparent py-4 md:py-0 md:flex-row md:ms-auto md:w-[65%] md:justify-between transition-all duration-500 ease-in-out ">
             <ul className="space-y-2 md:space-y-0 md:flex md:gap-4">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/">Listings </a>
-              </li>
-              <li>
-                <a href="/">Members </a>
-              </li>
-              <li>
-                <a href="/">Blog </a>
-              </li>
-              <li>
-                <a href="/">Contact</a>
-              </li>
+              {links.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <a href={`#${item.text}`}>{item.link}</a>
+                  </li>
+                );
+              })}
             </ul>
 
             <ul className="space-y-2 md:space-y-0 md:flex md:gap-4">

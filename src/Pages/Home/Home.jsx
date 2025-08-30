@@ -41,7 +41,7 @@ function Home() {
       <main>
         <Navbar />
         {/* Start Header Section */}
-        <header>
+        <header id="home">
           <div className="h-screen flex flex-col gap-6 items-center justify-center text-center capitalize text-white">
             <h1 className="text-5xl font-bold ">Welcome to Real Estate</h1>
             <p className="text-xl mt-4">Your dream home awaits</p>
@@ -79,7 +79,7 @@ function Home() {
         </section>
         {/* End Btn Scroll Up Section */}
         {/* Start Citities & Properties Section */}
-        <section>
+        <section id="listings">
           <div className="container my-[25vh]">
             <div className="text-center py-7">
               <h2 className="text-blackColor text-4xl font-semibold mb-3">
@@ -268,7 +268,7 @@ function Home() {
         </section>
         {/* End streamline Section */}
         {/* Start Feature Section */}
-        <section>
+        <section id="members">
           <div className="container my-[25vh]">
             <div className="heading text-center">
               <h2 className="font-medium text-4xl mb-2">Featured Properties</h2>
@@ -1100,7 +1100,7 @@ function Home() {
         </section>
         {/* End Love To Live Section */}
         {/* Start Articals & News Section */}
-        <section>
+        <section id="blog">
           <div className="container">
             <div className="headeing-content text-center my-[18vh]">
               <h2 className="font-semibold text-2xl">Recent Articles & News</h2>
@@ -1386,7 +1386,7 @@ function Home() {
         </section>
         {/* End Download app Section */}
         {/* Start Stay Up Date */}
-        <section>
+        <section id="contact">
           <div className="container flex flex-col gap-4 items-center my-[4em]">
             <span className="flex justify-center items-center ">
               <svg
