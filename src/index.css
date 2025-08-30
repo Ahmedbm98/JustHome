@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   font-family: 'Poppins', sans-serif;
+}
+
+::-moz-selection {
+   /* Code for Firefox */
+   color: #d4aa70;
+   background: #f2f2f2;
+}
+
+::selection {
+   color: #d4aa70;
+   background-color: #1a1a1a;
+}
+
+::-webkit-scrollbar {
+   width: 10px;
+}
+
+::-webkit-scrollbar-track {
+   background-color: #f2f2f2;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: #d4aa70;
+}
+
+
+/* Start Button Scroll To Up Section */
+.btn {
+   width: 50px;
+   height: 50px;
+   background-color: #1e4a42;
+   border-radius: 50%;
+   position: fixed;
+   right: 20px;
+   bottom: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+
+/* End Button Scroll To Up Section */
+/* Start Header Section */
+
+header {
+   background-image: url("./assets/Imgs/bg-home.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   height: 100dvh;
+   width: 100dvw;
+}
+
+/* End Header Section */
+
+.love-live {
+   background-image: url("./assets/Imgs/bg-love-live.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   width: 100dvw;
+   height: 600px;
+   margin-block: 20px;
+}
